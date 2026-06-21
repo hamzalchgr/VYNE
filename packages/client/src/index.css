@@ -1,3 +1,23 @@
 @import "tailwindcss";
 
-/* font-family: 'General Sans', sans-serif; */
+
+@theme {
+   /* --font-general: 'General Sans', sans-serif; */
+}
+
+@layer base {
+   html {
+      scroll-behavior: smooth;
+      font-family: 'General Sans', sans-serif;
+   }
+
+   body {
+      @apply text-sm font-medium
+   }
+}
+
+@layer components {
+   .nav-link {
+      @apply uppercase
+   }
+}

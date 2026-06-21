@@ -1,7 +1,16 @@
-const App = () => {
-  return (
-    <div className="text-4xl">App</div>
-  )
-}
+import { Routes, Route } from 'react-router-dom';
 
-export default App
+import Home from './pages/home/Home';
+import Layout from './components/layout/Layout';
+
+const App = () => {
+   return (
+      <Routes>
+         <Route path="/" element={<Layout />}>
+            <Route index path="/" element={<Home />} />
+         </Route>
+      </Routes>
+   );
+};
+
+export default App;
