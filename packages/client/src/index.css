@@ -2,13 +2,14 @@
 
 
 @theme {
-   /* --font-general: 'General Sans', sans-serif; */
+   --font-geist: "Geist", sans-serif;
+   --font-instrument: "Instrument Serif", serif;
 }
 
 @layer base {
    html {
       scroll-behavior: smooth;
-      font-family: 'General Sans', sans-serif;
+      font-family: 'Geist', sans-serif;
    }
 
    body {
@@ -19,5 +20,9 @@
 @layer components {
    .nav-link {
       @apply uppercase
+   }
+
+   h1, h2, h3 {
+      @apply font-instrument
    }
 }
